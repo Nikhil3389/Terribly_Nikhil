@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Terribly Tiny Tales Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application that generates a histogram of the top 20 words from a given text file.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To run this project locally, you need to have Node.js and npm installed on your machine. Once you have those installed, follow these steps:
+1. Clone this repository to your local machine.
+2. Navigate to the root folder of the project in your terminal.
+3. Run the command npm install to install all dependencies.
+4. Run the command npm start to start the development server.
+5. Open your browser and navigate to http://localhost:3000 to view the app.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To use this app, simply enter the URL of the text file you want to generate a histogram for and click the "Submit" button. The app will generate a histogram of the top 20 words in the text file and display it on the screen. You can also export the data to a CSV file by clicking the "Export" button.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Additional Information
 
-### `npm run build`
+1. This app was built using React, PapaParse, axios, and Recharts.
+2. The app fetches the text data from a remote URL and parses it using PapaParse.
+3. The app then generates a frequency map of all the words in the text and sorts it by frequency to get the top 20 words.
+4. The app displays the histogram using Recharts and allows you to export the data to a CSV file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Screenshots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here are some screenshots of the Terribly Tiny Tales Project:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Contributing
+Contributions are always welcome! Feel free to fork this project and create a pull request with your changes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Acknowledgements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Thank you to Terribly Tiny Tales for providing the test text file used in this project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
