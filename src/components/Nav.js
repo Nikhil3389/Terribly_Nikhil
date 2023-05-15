@@ -10,6 +10,7 @@ function NavBar() {
             <Link to="/">Terribly Tiny Tales Project</Link>
           </li>
         </li>
+
       </ul>
     </nav>
   );

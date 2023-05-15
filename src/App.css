@@ -77,17 +77,5 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #f2f2f2; */
-  height: 100vh;
-}
-a-scene {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-canvas.a-canvas {
-  z-index: -1;
+  height: 81.5vh;
 }
