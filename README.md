@@ -27,6 +27,10 @@ To use this app, simply enter the URL of the text file you want to generate a hi
 # Screenshots
 
 Here are some screenshots of the Terribly Tiny Tales Project:
+![image](https://github.com/Nikhil3389/Terribly_Nikhil/assets/71307854/0e4aa014-bdce-4893-a594-926e5f6f10a2)
+![image](https://github.com/Nikhil3389/Terribly_Nikhil/assets/71307854/5a05db94-ea02-4455-bde4-5ec647655ec4)
+
+
 
 
 # Contributing
