@@ -36,3 +36,69 @@
     transform: rotate(360deg);
   }
 }
+
+/* Set background image and color for the page */
+body {
+  background-image: url("https://www.example.com/background-image.jpg");
+  /* background-color: #f2f2f2; */
+   background-color: #dcfad8;
+}
+
+/* Style the container */
+/* .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+} */
+
+/* Style the button */
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Style the chart container */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+/* Style the export button */
+.chart-container button {
+  background-color: #008CBA;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f2f2f2; */
+  height: 100vh;
+}
+a-scene {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+canvas.a-canvas {
+  z-index: -1;
+}
