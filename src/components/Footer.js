@@ -2,7 +2,6 @@ import React from "react";
 import { FaHeart } from "react-icons/fa";
 import "./style.css";
 
-
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (

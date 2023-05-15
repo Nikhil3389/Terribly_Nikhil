@@ -1,79 +1,69 @@
 import React, { useState } from "react";
 import Papa from "papaparse";
 import axios from "axios";
-// import "aframe";
-
 import {
   BarChart,
   Bar,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   Legend,
   Cell,
 } from "recharts";
-
-// import "./App.css"; // Import your stylesheet
-import NavBar from "./Nav";
-import Footer from "./Footer";
-// import Navigation from "./Navigation";
-
 function Content() {
-     const [histogramData, setHistogramData] = useState([]);
-     const [isSubmitted, setIsSubmitted] = useState(false);
-     const fetchData = async () => {
-       try {
-         const response = await axios.get(
-           "https://www.terriblytinytales.com/test.txt"
-         );
-         const csvData = Papa.parse(response.data).data;
-            const randomColor = () => {
-              const r = Math.floor(Math.random() * 255);
-              const g = Math.floor(Math.random() * 255);
-              const b = Math.floor(Math.random() * 255);
-              return `rgb(${r}, ${g}, ${b})`;
-            };
-         // get frequency of each word
-         const freqMap = new Map();
-         csvData.forEach((row) => {
-           row[0].split(" ").forEach((word) => {
-             if (freqMap.has(word)) {
-               freqMap.set(word, freqMap.get(word) + 1);
-             } else {
-               freqMap.set(word, 1);
-             }
-           });
-         });
+  const [histogramData, setHistogramData] = useState([]);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        "https://www.terriblytinytales.com/test.txt"
+      );
+      const csvData = Papa.parse(response.data).data;
+      const randomColor = () => {
+        const r = Math.floor(Math.random() * 255);
+        const g = Math.floor(Math.random() * 255);
+        const b = Math.floor(Math.random() * 255);
+        return `rgb(${r}, ${g}, ${b})`;
+      };
+      // get frequency of each word
+      const freqMap = new Map();
+      csvData.forEach((row) => {
+        row[0].split(" ").forEach((word) => {
+          if (freqMap.has(word)) {
+            freqMap.set(word, freqMap.get(word) + 1);
+          } else {
+            freqMap.set(word, 1);
+          }
+        });
+      });
 
-         // sort by frequency and get top 20 words
-         const sortedFreq = [...freqMap.entries()].sort((a, b) => b[1] - a[1]);
-         const topWords = sortedFreq.slice(1, 20).map((entry) => ({
-           word: entry[0],
-           count: entry[1],
-           color: randomColor(),
-         }));
+      // sort by frequency and get top 20 words
+      const sortedFreq = [...freqMap.entries()].sort((a, b) => b[1] - a[1]);
+      const topWords = sortedFreq.slice(1, 20).map((entry) => ({
+        word: entry[0],
+        count: entry[1],
+        color: randomColor(),
+      }));
 
-         setHistogramData(topWords);
-         setIsSubmitted(true);
-       } catch (error) {
-         console.error(error);
-       }
-     };
-     
+      setHistogramData(topWords);
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-     const handleExport = () => {
-       const csvString = Papa.unparse(histogramData);
-       const blob = new Blob([csvString], { type: "text/csv;charset=utf-8;" });
-       const link = document.createElement("a");
-       link.href = URL.createObjectURL(blob);
-       link.download = "histogram.csv";
-       link.click();
-     };
+  const handleExport = () => {
+    const csvString = Papa.unparse(histogramData);
+    const blob = new Blob([csvString], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "histogram.csv";
+    link.click();
+  };
 
-     const chartStyle = {
-       margin: "0 auto",
-     };
+  const chartStyle = {
+    margin: "0 auto",
+  };
 
   return (
     <div className="container">
@@ -97,9 +87,9 @@ function Content() {
             <br />
             <br />
 
-                <button onClick={fetchData} style={{ borderRadius: 5 }}>
-                Submit
-                </button>
+            <button onClick={fetchData} style={{ borderRadius: 5 }}>
+              Submit
+            </button>
           </div>
         </>
       )}
@@ -108,7 +98,7 @@ function Content() {
           <h1
             style={{ fontSize: "48px", fontWeight: "bold", color: "#F44336" }}
           >
-            Ploting
+            Histogram of Top 20 Words
           </h1>
           <BarChart
             width={900}

@@ -4,10 +4,9 @@ import "./App.css"; // Import your stylesheet
 import Navigation from "./Navigation";
 
 function App() {
- 
   return (
     <>
-      <Navigation/>
+      <Navigation />
     </>
   );
 }

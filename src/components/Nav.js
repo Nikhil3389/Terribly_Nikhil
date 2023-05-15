@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 function NavBar() {
@@ -7,15 +7,9 @@ function NavBar() {
       <ul>
         <li>
           <li>
-            <Link to="/">Project</Link>
+            <Link to="/">Terribly Tiny Tales Project</Link>
           </li>
         </li>
-        {/* <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li> */}
       </ul>
     </nav>
   );

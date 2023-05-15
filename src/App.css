@@ -39,21 +39,10 @@
 
 /* Set background image and color for the page */
 body {
-  background-image: url("https://www.example.com/background-image.jpg");
-  /* background-color: #f2f2f2; */
+  /* background-image: url("https://www.example.com/background-image.jpg"); */
    background-color: #dcfad8;
 }
 
-/* Style the container */
-/* .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-} */
-
-/* Style the button */
 button {
   background-color: #4CAF50;
   border: none;
