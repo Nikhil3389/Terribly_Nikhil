@@ -12,11 +12,8 @@ function Navigation(){
         {/* <Switch> */}
 
         <NavBar />
-        <Switch>
-          <Route path="/" exact component={Content} />
-          {/* <Route path="/chart" component={Chart} /> */}
-          {/* <Route path="*" component={PageNot} /> */}
-        </Switch>
+        <Content/>
+        
         <Footer />
 
         {/* </Switch> */}
